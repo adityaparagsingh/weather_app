@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>WeatherNow</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    >
+</head>
+
+<body>
+
+<div class="app">
+
+    <header>
+        <div class="logo">
+            <i class="fa-solid fa-cloud-sun"></i>
+            <span>WeatherNow</span>
+        </div>
+
+        <button id="locationBtn" class="location-btn">
+            <i class="fa-solid fa-location-crosshairs"></i>
+            My Location
+        </button>
+    </header>
+
+
+    <section class="search-section">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+
+            <input
+                type="text"
+                id="cityInput"
+                placeholder="Search city..."
+                autocomplete="off"
+            >
+
+            <button id="searchBtn">
+                Search
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <div id="errorBox" class="error-box">
+        <i class="fa-solid fa-circle-exclamation"></i>
+        <span id="errorMessage"></span>
+    </div>
+
+
+    <div id="loading" class="loading">
+
+        <div class="spinner"></div>
+
+        <p>Getting weather...</p>
+
+    </div>
+
+
+    <main id="weatherContent">
+
+        <section class="main-card">
+
+            <div class="location-row">
+
+                <div>
+                    <h1 id="cityName">Pune</h1>
+                    <p id="countryName">India</p>
+                </div>
+
+                <div class="date-time">
+                    <p id="date">--</p>
+                    <strong id="time">--:--</strong>
+                </div>
+
+            </div>
+
+
+            <div class="main-weather">
+
+                <div class="weather-icon" id="weatherIcon">
+                    ☀️
+                </div>
+
+                <div>
+
+                    <div class="temperature">
+                        <span id="temperature">--</span>°C
+                    </div>
+
+                    <div id="condition" class="condition">
+                        --
+                    </div>
+
+                    <div class="feels">
+                        Feels like
+                        <strong>
+                            <span id="feelsLike">--</span>°C
+                        </strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="details">
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    💧
+                </div>
+
+                <div>
+                    <p>Humidity</p>
+                    <h3>
+                        <span id="humidity">--</span>%
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    💨
+                </div>
+
+                <div>
+                    <p>Wind Speed</p>
+                    <h3>
+                        <span id="windSpeed">--</span>
+                        <small>km/h</small>
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    🌡️
+                </div>
+
+                <div>
+                    <p>Pressure</p>
+                    <h3>
+                        <span id="pressure">--</span>
+                        <small>hPa</small>
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    👁️
+                </div>
+
+                <div>
+                    <p>Visibility</p>
+                    <h3>
+                        <span id="visibility">--</span>
+                        <small>km</small>
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    ☁️
+                </div>
+
+                <div>
+                    <p>Cloud Cover</p>
+                    <h3>
+                        <span id="cloudiness">--</span>%
+                    </h3>
+                </div>
+
+            </div>
+
+
+            <div class="detail-card">
+
+                <div class="detail-icon">
+                    🧭
+                </div>
+
+                <div>
+                    <p>Wind Direction</p>
+                    <h3 id="windDirection">--</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="sun-card">
+
+            <div class="sun-item">
+
+                <div class="sun-icon">
+                    🌅
+                </div>
+
+                <div>
+                    <p>Sunrise</p>
+                    <h3 id="sunrise">--:--</h3>
+                </div>
+
+            </div>
+
+
+            <div class="divider"></div>
+
+
+            <div class="sun-item">
+
+                <div class="sun-icon">
+                    🌇
+                </div>
+
+                <div>
+                    <p>Sunset</p>
+                    <h3 id="sunset">--:--</h3>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        Weather data provided by Open-Meteo
+    </footer>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
