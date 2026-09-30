@@ -1,6 +1,6 @@
 # 🌦️ WeatherNow
 
-A simple and responsive **Weather App** built using **HTML, CSS, and JavaScript** that provides real-time weather information for any city.
+A simple and responsive **Weather App** built using **HTML, CSS, and JavaScript** that provides real-time weather information for any city or place.
 
 The application uses the **Open-Meteo API**, so **no API key, account, or signup is required**. Users can search for a city and view important weather statistics such as temperature, humidity, wind speed, pressure, visibility, cloud cover, sunrise, sunset, and weather conditions.
 
